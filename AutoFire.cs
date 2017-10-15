@@ -28,7 +28,7 @@ public class AutoFire : MonoBehaviour
 	void OnTriggerStay(Collider other){
 		//Destroy(other.gameObject)
     //The Bullet instantiation happens here.
-    if (other.gameObject.name == "PlayerBall" || other.gameObject.name == "PlayerBall2"){
+    if (other.gameObject.tag == "Player"){
 
             GameObject Temporary_Bullet_Handler;
             Temporary_Bullet_Handler = Instantiate(Bullet,Barrel.transform.position,Barrel.transform.rotation) as GameObject;

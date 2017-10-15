@@ -14,7 +14,8 @@ public class Bullet : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter(Collision collision){
-		if (collision.gameObject.name == "PlayerBall"){
+		//seriously this isn't the best way but will do for now
+		if (collision.gameObject.name == "PlayerBall" || collision.gameObject.name == "PlayerBall2"){
 		Destroy(collision.gameObject);
 		}
 	}

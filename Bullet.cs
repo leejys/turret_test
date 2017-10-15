@@ -2,23 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turret : MonoBehaviour {
+public class Bullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
 
 	}
-
 	// Update is called once per frame
 	void Update () {
 
 	}
 
-	void OnTriggerEnter(Collider other){
-		//something something 
-	}
-
-	void Fire () {
-
+	private void OnCollisionEnter(Collision collision){
+		if (collision.gameObject.name == "PlayerBall"){
+		Destroy(collision.gameObject);
+		}
 	}
 }

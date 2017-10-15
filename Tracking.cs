@@ -13,6 +13,7 @@ public class Tracking : MonoBehaviour {
  // Update is called once per frame
  void Update () {
   if(m_target){
+    //basically if the target isn't locked on,
    if(m_lastKnownPosition != m_target.transform.position){
     m_lastKnownPosition = m_target.transform.position;
     m_lookAtRotation = Quaternion.LookRotation(m_lastKnownPosition - transform.position);
